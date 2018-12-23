@@ -1,0 +1,11 @@
+Title of the project 
+______________________
+
+Network design for a software development organization
+
+
+Abstract
+___________
+Design a network for software development organization based on vlans  witTh cisco routers and switches. The organization has three deaprtments, development ,testing and trainee and a high speed internet connection.
+
+the traineee department should not have acess to internet browsing but all other communication should be  allowed on the  internet. THe  user in the department should have inter access communication with each other. All the departments should be on different IP networks. 

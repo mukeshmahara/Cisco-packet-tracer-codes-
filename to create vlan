@@ -1,0 +1,101 @@
+to create vlan
+________________
+
+How to Configure VLAN on Cisco Switch?
+
+Let’s start to configure VLAN on Cisco switch using Cisco Packet Tracer. You can download the VLAN Lab or create your lab within Cisco packet tracer or other network simulators.
+
+Configure VLAN on Cisco Switch
+
+(
+1) Open the VLAN lab and create these three VLAN 	
+	and named Marketing, Accounting, and Sales. So 
+	let’s create them with the following commands.
+
+(2) First, change the switch name with “hostname” 
+	command.
+
+
+1.Switch>enable 
+2.Switch#configure terminal 
+3.Enter configuration commands, one per line. End 
+  with CNTL/Z.
+4.Switch(config)#hostname SW2
+5.SW2(config)#
+
+
+
+(3) Now create the VLANs using “VLAN” command.
+
+1.SW2(config)#vlan 2
+2.SW2(config-vlan)#name Marketing 
+3.SW2(config-vlan)#vlan 3
+4.SW2(config-vlan)#name Accounting 
+5.SW2(config-vlan)#vlan 4
+6.SW2(config-vlan)#name Sales
+7.SW2(config-vlan)#
+
+
+
+(4) Just type the “do sh vlan” command from config mod to see whether VLANs are created or not.
+
+1.Show Vlan Command
+2.Show VLAN Command
+	
+	You see the VLANs are created successfully.
+
+
+(5) Now try to add interfaces to each of these 
+	VLANs. All the Interfaces ports are within the default VLAN and not yet grouped to Marketing, Accounting, and Sales. So try to add an interface to a VLAN with the “Switchport” command.
+
+
+1.SW2(config)#interface fastEthernet 0/5
+2.SW2(config-if)#switchport mode access 
+3.SW2(config-if)#switchport access vlan 2
+4.SW2(config-if)#exit
+5.SW2(config)#interface fastEthernet 0/6
+6.SW2(config-if)#switchport mode access 
+7.SW2(config-if)#switchport access vlan 2
+8.SW2(config-if)#
+
+
+I have added the [fastEthernet 0/5] and [fastEthernet 0/6] to VLAN 2 which is our Marketing VLAN. In this method, we add each interface one by one, but you can use “Interface range” command to add a group of ports to a VLAN.
+
+
+1.SW2(config)#interface range fastEthernet 0/2-4
+2.SW2(config-if-range)#switchport mode access 
+3.SW2(config-if-range)#switchport access vlan 4
+
+
+(6) Finally type “do sh vlan” and see the result 
+	again.
+
+
+
+
+
+to set trunk port
+___________________
+interface fastethernet <port-name>
+switchpot mode trunk
+exit
+
+
+
+
+to check 
+__________
+
+
+show interface trunk
+
+to create:
+native vlan
+___________
+goto global configuration mode
+type: interface fastEthernet 0/24
+type: switchmode trunk
+type: switchport trunk native vlan 100
+type: switchport trunk allowed vlan 1,2
+type: no shutdown
+type: exit

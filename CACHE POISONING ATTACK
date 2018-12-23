@@ -1,0 +1,474 @@
+CACHE POISONING ATTACK
+What Is Cache Poisoning?
+___________________________
+
+Cache poisoning is a type of attack in which corrupt data is inserted into the cache database of the Domain Name System (DNS) name server. The Domain Name System is a system that associates domain names with IP addresses. Devices that connect to the internet or other private networks rely on the DNS for resolving URLs, email addresses and other human-readable domain names into their corresponding IP addresses. In a DNS cache poisoning attack, a malicious party sends forged responses from an imposter DNS in order to reroute a domain name to a new IP address. This new IP address is almost always for a server that is controlled by the attacker. DNS cache poisoning attacks are often used to spread computer worms and other malware. More sophisticated uses for DNS cache poisoning include man-in-the-middle attacks and denial-of-service attacks.
+
+Cache Poisoning Attacks
+________________________
+
+The success of a cache poisoning attack relies on the existence of exploitable vulnerabilities in DNS software. Once an attacker has sent a forged DNS response, the corrupt data provided by the attacker gets cached by the real DNS name server. It is at this point that the DNS cache is considered “poisoned.” As a result, future users that attempt to visit the corrupted domain will instead be routed to the new IP address selected by the attacker. Users will continue to receive inauthentic IP addresses from the DNS until the poisoned cache has been cleared.
+
+DNS cache poisoning attacks usually incorporate elements of social engineering to manipulate victims into downloading malware. The servers and websites that attackers use to replace authentic IP addresses are set up to appear legitimate while they actually contain malware in disguise. Attackers’ use of social engineering along with the fact that domain names still appear normal can make it very difficult for users to detect cache poisoning attacks. As a result, victims willingly download malicious content that they believe to be valid and from trusted sources.
+
+
+
+Prevent Cache Poisoning Attacks
+_______________________________
+
+There are several measures that enterprises should take to prevent DNS cache poisoning attacks. For starters, IT teams should configure DNS servers to rely as little as possible on trust relationships with other DNS servers. Doing so will make it more difficult for attackers to use their own DNS servers to corrupt their targets’ servers. Beyond limiting trust relationships on the DNS, IT teams should ensure that they’re using the most recent version of DNS. Domain Name Systems that use BIND 9.5.0 or higher include features such as port randomization and cryptographically secure Transaction IDs, both of which help prevent cache poisoning attacks.
+
+In order to further prevent cache poisoning attacks, IT teams should configure their DNS name servers to:
+
+Limit recursive queries.
+Store only data related to the requested domain.
+Restrict query responses to only provide information about the requested domain.
+The DNS server should be maintained to ensure that it is clear of any services that aren’t needed. Extraneous services running on the DNS server only provide attackers with more potential attack vectors.
+
+There are also cache poisoning tools available to help organizations prevent cache poisoning attacks. The most popular cache poisoning prevention tool is probably DNSSEC (Domain Name System Security Extension). DNSSEC is a cache poisoning tool developed by the Internet Engineering Task Force that provides secure DNS data authentication.
+
+__________________
+COMPUTER WORM
+What is a computer worm?
+_________________________
+Computer worms are among the most common types of malware. They spread over computer networks by exploiting operating system vulnerabilities. Worms typically cause harm to their host networks by consuming bandwidth and overloading web servers. Computer worms can also contain “payloads” that damage host computers. Payloads are pieces of code written to perform actions on affected computers beyond simply spreading the worm. Payloads are commonly designed to steal data or delete files. Some payloads even create backdoors in host computers that allow them to be controlled by other computers. Malicious parties can use networks of these infected computers (“botnets”) to spread spam and perform denial-of-service attacks.
+
+Computer worms are classified as a type of computer virus, but there are several characteristics that distinguish computer worms from regular viruses. A major difference is the fact that viruses spread through human activity (running a program, opening a file, etc) while computer worms have the ability to spread automatically without human initiation. In addition to being able to spread unassisted, computer worms have the ability to self-replicate. This means that worms can create multiple copies of themselves to send to other computers. This often happens through the sending of mass emails to infected users’ email contacts.
+
+
+
+Computer Worm Examples
+
+Computer worms have caused billions of dollars in damages over the past decade. Today, the Stuxnet, Duqu, and Flame computer worms continue to make headlines as a new breed of malware: computer worms designed for cyber warfare.
+
+The Stuxnet virus is a computer worm discovered in June 2010. Stuxnet was created by the United States and Israel, targeting Iran’s Uranium Enrichment Program. Stuxnet was created as part of a top-secret cyber war program codenamed “Olympic Games.” The computer worm crashed 984 centrifuges at Iranian nuclear power plants between 2008 and 2012, setting back nuclear weapon production capabilities in Iran by about two years.
+
+The Duqu computer worm was discovered in September 2011 and is believed to be linked to the Stuxnet virus. Duqu and Stuxnet operate very similarly and were both created by governments to target nuclear production in Iran. Rather than being used to disrupt the production of nuclear weapons, Duqu was used for stealing information. Some versions of Duqu did include a payload capable of deleting files from the host’s computer.
+
+The Flame virus was discovered in 2012 and is regarded as one of the most sophisticated computer worms ever found. Flame’s code shares many similarities with the Stuxnet code, and Flame, like Stuxnet, was designed as part of a government-sponsored cyber program. While the Stuxnet computer worm was designed to sabotage nuclear weapon production, Flame is believed to have been created purely for cyber spying. Flame has infected thousands of computers since its deployment, mostly in Iran and other Middle Eastern countries.
+
+Protecting yourself from Computer Worms
+________________________________________
+
+There are several best practices users can follow to protect their computers from worms. Following these steps will not only decrease the risk of infection, but also provide for easier detection and computer worm removal.
+
+Keep the computers’ operating system and software up-to-date with vendor-issued security releases. These updates often contain security patches designed to protect computers from newly discovered worms.
+Avoid opening emails that you don’t recognize or expect, as many computer worms spread via email.
+Refrain from opening attachments and clicking on links from untrusted/unfamiliar sources.
+Run a firewall and antivirus software to be further protected from computer worms. Software firewalls will keep the computer protected from unauthorized access. Choose an antivirus program that includes download scanning functionality (to detect malicious content in email and web downloads) as well as malware removal tools.
+Symptoms of a Computer Worm
+
+Users should be familiar with the symptoms of a computer worm so that they can quickly recognize infections and begin the process of computer worm removal. Here are some of the typical symptoms of a computer worm:
+
+Slow computer performance
+Freezing/crashing
+Programs opening and running automatically
+Irregular web browser performance
+Unusual computer behavior (messages, images, sounds, etc)
+Firewall warnings
+Missing/modified files
+Appearance of strange/unintended desktop files or icons
+Operating system errors and system error messages
+Emails sent to contacts without the user’s knowledge
+While other issues can cause these symptoms, the appearance of multiple symptoms from this list or the repeated occurrence of certain symptoms usually indicates that the computer has been infected with a worm.
+
+Computer Worm Removal
+_________________________
+There are several steps that should be taken for computer worm removal. It is important to disconnect the computer from the internet and any local area networks before taking any other actions for worm removal. In order to prevent spreading of the worm, use a non-infected computer to download any updates or programs required and then install them on the infected machine via an external storage device. Once the computer is disconnected:
+
+Check that all antivirus signatures are up-to-date.
+Scan the computer with antivirus software.
+If the scan detects a computer worm or other malware, use the software to remove malware and clean or delete infected files. A scan that detects no malware is usually indicative that symptoms are being caused by hardware or software problems.
+Check that the computer’s operating system is up-to-date and all software and applications have current patches installed.
+If a worm is difficult to remove, check online for specific computer worm removal utilities.
+
+
+
+
+
+
+
+______________________________________________________________________________
+KEYLOGGER
+Keyloggers: Detectors, PC Monitors, Keylogger Software, What Is a Keylogger
+What Is a Keylogger?
+______________________________________________________________________________
+
+Keyloggers or keystroke loggers are software programs or hardware devices that track the activities (keys pressed) of a keyboard. Keyloggers are a form of spyware where users are unaware their actions are being tracked. Keyloggers can be used for a variety of purposes; hackers may use them to maliciously gain access to your private information, while employers might use them to monitor employee activities. Some keyloggers can also capture your screen at random intervals; these are known as screen recorders. Keylogger software typically stores your keystrokes in a small file, which is either accessed later or automatically emailed to the person monitoring your actions.
+
+
+How Does a Keylogger Get on Your Computer?
+___________________________________________
+
+A keylogger can be installed on your computer any number of ways. Anyone with access to your computer could install it; keyloggers could come as a component part of a virus or from any application installation, despite how deceptively innocent it may look. This is part of the reason why you should always be sure you’re downloading files from a trusted resource.
+
+Keylogger Software
+_______________________
+
+Remot- access software keyloggers can allow access to locally recorded data from a remote location. This communication can happen by using one of the following methods:
+
+Uploading the data to a website, database or FTP server.
+Periodically emailing data to a predefined email address.
+Wirelessly transmitting data through an attached hardware system.
+Software enabling remote login to your local machine.
+Additional features that some software keyloggers come with can capture additional information without requiring any keyboard key presses as input. They include:
+
+Clipboard logging – Anything that can be copied to the clipboard is captured.
+Screen logging – Randomly timed screenshots of your computer screen are logged.
+Control text capture – The Windows API allows for programs to request the text value of some controls, meaning that your password may be captured even if behind a password mask (the asterisks you see when you type your password into a form).
+Activity tracking – Recording of which folders, programs and windows are opened and also possibly screenshots of each.
+Recording of search engine queries, instant message conversations, FTP downloads along with any other internet activities.
+Keylogger Hardware
+
+Hardware-based keyloggers can monitor your activities without any software being installed at all. Examples of these include:
+
+Keyboard hardware - These loggers take the form of a piece of hardware inserted somewhere between the computer keyboard and the computer, typically along the keyboard's cable connection. There are of course more advanced implementation methods that would prevent any device from being visible externally. This type of hardware keylogger is advantageous because it is not dependent on any software nor can it be detected by any software.
+Wireless keyboard sniffers - It is possible for the signals sent from a wireless keyboard to its receiver to be intercepted by a wireless sniffer.
+Keyboard overlays - Overlays are popular in ATM theft cases where thieves capture a user's PIN number. This device is designed to blend in with the machine so that people are unaware of its presence.
+How Can I Detect and Remove a Keylogger?
+
+There are a variety of ways to detect a keylogger, though none are a catchall, so if you have reason to suspect your computer has a keylogger, we recommend trying a variety of these tactics:
+
+Begin by running your antivirus, which can often detect a keylogger on your system.
+Run a program like Spybot Search and Destroy or MalwareBytes to check for certain types.
+Check your task list by pressing ctrl+alt+del in Windows. Examine the tasks running, and if you are unfamiliar with any of them, look them up on a search engine.
+Scan your hard disk for the most recent files stored. Look at the contents of any files that update often, as they might be logs.
+Use your system configuration utility to view which programs are loaded at computer start-up. You can access this list by typing “msconfig” into the run box.
+
+
+
+__________________________________
+LDAP INJECTION
+The danger of an LDAP injection
+__________________________________
+
+LDAP injection is a type of attack on a web application where hackers place code in a user input field in an attempt to gain unauthorized access or information. Like Java SQL injection or .NET SQL injection, an LDAP injection can lead to information theft, browser or session hijacking, defacement of website and worse.
+
+In LDAP injection uses client-supplied data in LDAP (Lightweight Directory Access Protocol) statements without removing potentially harmful code from the request. When a web application doesn’t adequately sanitize user-supplied input, hackers may be able to change the construction of an LDAP statement which will run with the same permissions as the component that executed the command. An LDAP injection can result in serious security issues if the permissions grant the rights to query, modify or remove anything inside the LDAP tree.
+
+For example, attackers might use an LDAP injection to insert malicious code that allows them to see all the usernames and passwords assigned to a system or to add their names as system administrators. A successful LDAP injection can be a major security breach, causing headaches, damaged reputation and financial losses for the unlucky company.
+
+
+
+_________________________________________________________________________________
+MALWARE
+Malware Tutorial: Learn About Malware, Vulnerabilities and How to Avoid Malware
+What Is Malware?
+__________________________________________________________________________________
+
+
+Malware is short for “malicious software”: hostile applications that are created with the express intent to damage or disable mobile devices, computers or network servers. Malware’s objectives can include disrupting computing or communication operations, stealing sensitive data, accessing private networks, or hijacking systems to exploit their resources. The exponential growth in email and internet use over the last decade has brought with it a corresponding growth in malware.
+
+Malware is deliberately malevolent, even when disguised as genuine software from a seemingly reputable source. Today’s malware primarily targets sensitive personal, financial or business information, typically for monetary gain. Other objectives include identity theft, cyberwarfare and espionage, or service disruption targeting specific companies. The victims can just as easily be governments, enterprises or individual users. For a malware program to accomplish its goals, it must be able to run without being detected, shut down or deleted.
+
+
+
+Types of Malware
+___________________
+
+Any kind of intrusive software that is installed without consent can be classified malware… be it code, scripts or active content. Common types of malware include:
+
+Virus: spreads via deliberate user action such as downloading a file or running a program
+Worm: spreads automatically by replicating itself across computers or networks
+Trojan: spreads by appearing safe or desirable but disguising its true intent (e.g., backdoors)
+Spyware: monitors user activities for marketing purposes or keylogs user credentials
+Adware: serves unwanted ads or redirects user’s browser traffic
+Dialer or Zombie: runs in the background while hijacking computing resources (e.g., bot networks)
+Microsoft recently reported that one in every 14 downloads from the internet may now contain malware. The rise of mobile computing and social media in recent years is witnessing an exponential rise in malware proliferation. Malware on the Android computing platform grew 3,325 percent in 2011 alone, according to a study by Juniper Networks.
+
+Certain kinds of malware target websites or networks, not individuals. Web malware focuses on browser-based vulnerabilities as opposed to operating system vulnerabilities. Attacks can redirect site traffic to a fake phishing site, use the site as an endpoint in bot networks, or exploit the site’s hosting account for spam or other purposes. StopTheHacker has estimated that 6,000 websites fall prey to malware attacks every day.
+
+How to Avoid Malware
+___________________________
+
+Malware infection can cause network computing or communication processes to run unbearably slow or hijack them altogether. Individuals, employers and their software vendors can partner in shared anti-malware strategies. Here are some actions that can protect your computers and networks from malware:
+
+Anti-malware software – It never hurts to have the latest version of a common malware-seeking program installed on all devices to seek and destroy rogue programs such as viruses. Scan personal or business computers regularly and update the software often.
+Anti-spyware software – These packages provide real-time protection for computers against the installation of malware by scanning incoming traffic and blocking threats.
+Spam filters – These block or quarantine email messages with suspicious content or from unknown senders to alert users not to open or respond. Most enterprises have centralized spam mitigation in place, and many personal email providers also provide this service.
+Firewalls and IDS – Firewalls and intrusion detection systems act as traffic cops for network activity and block anything suspicious. This is enterprise-grade technology that protects user computers, servers or networks from malicious applications or cyberattack. Firewalls may not prevent malware installation, but they can detect nefarious in-process operations.
+Security scans – This activity tests business websites and enterprise software for known malware that may have infected application code. Many app stores execute basic scans on software they host and sell, but this is no guarantee of safety so vigilance is needed.
+Regular updates – Always keep network, desktop and device software and operating systems up to date. Security patches are issued regularly by trusted software vendors and should be installed to deflect the latest threats.
+Common sense – The easiest way to deal with malware is to not get it in the first place. Experienced computer users avert potential disasters by practicing “skeptical computing,” which assumes that any new program is potentially harmful until proven safe.
+
+
+
+
+___________________________________________________________________________________________________________________
+MAN IN THE MIDDLE (MITM) ATTACK
+Man-in-the-Middle Tutorial: Learn About Man-in-the-Middle Attacks, Vulnerabilities and How to Prevent MITM Attacks
+What Is a Man-in-the-Middle Attack?
+____________________________________________________________________________________________________________________
+
+A man-in-the-middle attack is a type of cyberattack where a malicious actor inserts him/herself into a conversation between two parties, impersonates both parties and gains access to information that the two parties were trying to send to each other. A man-in-the-middle attack allows a malicious actor to intercept, send and receive data meant for someone else, or not meant to be sent at all, without either outside party knowing until it is too late. Man-in-the-middle attacks can be abbreviated in many ways, including MITM, MitM, MiM or MIM.
+
+Key Concepts of a Man-in-the-Middle Attack
+_____________________________________________
+
+Man-in-the-middle is a type of eavesdropping attack that occurs when a malicious actor inserts himself as a relay/proxy into a communication session between people or systems.
+A MITM attack exploits the real-time processing of transactions, conversations or transfer of other data.
+Man-in-the-middle attacks allow attackers to intercept, send and receive data never meant to be for them without either outside party knowing until it is too late.
+
+
+Man-in-the-Middle Attack Examples
+___________________________________
+
+mitm-flow.gif
+man in the middle graph
+Man-in-the-Middle Flow
+In the image above, you will notice that the attacker inserted him/herself in-between the flow of traffic between client and server. Now that the attacker has intruded into the communication between the two endpoints, he/she can inject false information and intercept the data transferred between them.
+
+Below is another example of what might happen once the man in the middle has inserted him/herself.
+
+mitm-steps.gif
+man in the middle example
+Man-in-the-Middle Example
+The hacker is impersonating both sides of the conversation to gain access to funds. This example holds true for a conversation with a client and server as well as person-to-person conversations. In the example above, the attacker intercepts a public key and with that can transpose his own credentials to trick the people on either end into believing they are talking to one another securely.
+
+Interactions Susceptible to MITM Attacks
+______________________________________________
+
+Financial sites – between login and authentication
+Connections meant to be secured by public or private keys
+Other sites that require logins – where there is something to be gained by having access
+
+
+Other Forms of Session Hijacking
+______________________________________
+
+Man-in-the-middle is a form of session hijacking. Other forms of session hijacking similar to man-in-the-middle are:
+
+Sidejacking - This attack involves sniffing data packets to steal session cookies and hijack a user’s session. These cookies can contain unencrypted login information, even if the site was secure.
+Evil Twin - This is a rogue Wi-Fi network that appears to be a legitimate network. When users unknowingly join the rogue network, the attacker can launch a man-in-the-middle attack, intercepting all data between you and the network.
+Sniffing - This involves a malicious actor using readily available software to intercept data being sent from, or to, your device.
+
+
+
+
+______________________________________________________________________
+ROOTKIT: WHAT IS A ROOTKIT?
+Rootkit: What Is a Rootkit, Scanners, Detection and Removal Software
+What Is a Rootkit?
+______________________________________________________________________
+
+A rootkit is a clandestine computer program designed to provide continued privileged access to a computer while actively hiding its presence. The term rootkit is a connection of the two words "root" and "kit." Originally, a rootkit was a collection of tools that enabled administrator-level access to a computer or network. Root refers to the Admin account on Unix and Linux systems, and kit refers to the software components that implement the tool. Today rootkits are generally associated with malware – such as Trojans, worms, viruses – that conceal their existence and actions from users and other system processes.
+
+What Can a Rootkit Do?
+_______________________
+
+A rootkit allows someone to maintain command and control over a computer without the computer user/owner knowing about it. Once a rootkit has been installed, the controller of the rootkit has the ability to remotely execute files and change system configurations on the host machine. A rootkit on an infected computer can also access log files and spy on the legitimate computer owner’s usage.
+
+___________________
+Rootkit Detection
+__________________
+
+It is difficult to detect rootkits. There are no commercial products available that can find and remove all known and unknown rootkits. There are various ways to look for a rootkit on an infected machine. Detection methods include behavioral-based methods (e.g., looking for strange behavior on a computer system), signature scanning and memory dump analysis. Often, the only option to remove a rootkit is to completely rebuild the compromised system.
+
+Rootkit Protection
+_______________________
+
+Many rootkits penetrate computer systems by piggybacking with software you trust or with a virus. You can safeguard your system from rootkits by ensuring it is kept patched against known vulnerabilities. This includes patches of your OS, applications and up-to-date virus definitions. Don't accept files or open email file attachments from unknown sources. Be careful when installing software and carefully read the end-user license agreements.
+
+Static analysis can detect backdoors and other malicious insertions such as rootkits. Enterprise developers as well as IT departments buying ready-made software can scan their applications to detect threats including "special" and "hidden-credential" backdoors. 
+
+Well-Known Rootkit Examples
+______________________________
+
+Lane Davis and Steven Dake - wrote the earliest known rootkit in the early 1990s.
+NTRootkit – one of the first malicious rootkits targeted at Windows OS.
+HackerDefender – this early Trojan altered/augmented the OS at a very low level of functions calls.
+Machiavelli - the first rootkit targeting Mac OS X appeared in 2009. This rootkit creates hidden system calls and kernel threads.
+Greek wiretapping – in 2004/05, intruders installed a rootkit that targeted Ericsson's AXE PBX.
+Zeus, first identified in July 2007, is a Trojan horse that steals banking information by man-in-the-browser keystroke logging and form grabbing.
+Stuxnet - the first known rootkit for industrial control systems
+Flame - a computer malware discovered in 2012 that attacks computers running Windows OS. It can record audio, screenshots, keyboard activity and network traffic.
+
+
+
+___________________________________
+SPOOFING ATTACK: IP, DNS & ARP
+What Is a Spoofing Attack?
+___________________________________
+
+A spoofing attack is when a malicious party impersonates another device or user on a network in order to launch attacks against network hosts, steal data, spread malware or bypass access controls. There are several different types of spoofing attacks that malicious parties can use to accomplish this. Some of the most common methods include IP address spoofing attacks, ARP spoofing attacks and DNS server spoofing attacks.
+
+IP Address Spoofing Attacks
+________________________________
+
+IP address spoofing is one of the most frequently used spoofing attack methods. In an IP address spoofing attack, an attacker sends IP packets from a false (or “spoofed”) source address in order to disguise itself. Denial-of-service attacks often use IP spoofing to overload networks and devices with packets that appear to be from legitimate source IP addresses.
+
+There are two ways that IP spoofing attacks can be used to overload targets with traffic. One method is to simply flood a selected target with packets from multiple spoofed addresses. This method works by directly sending a victim more data than it can handle. The other method is to spoof the target’s IP address and send packets from that address to many different recipients on the network. When another machine receives a packet, it will automatically transmit a packet to the sender in response. Since the spoofed packets appear to be sent from the target’s IP address, all responses to the spoofed packets will be sent to (and flood) the target’s IP address.
+
+
+
+IP spoofing attacks can also be used to bypass IP address-based authentication. This process can be very difficult and is primarily used when trust relationships are in place between machines on a network and internal systems. Trust relationships use IP addresses (rather than user logins) to verify machines’ identities when attempting to access systems. This enables malicious parties to use spoofing attacks to impersonate machines with access permissions and bypass trust-based network security measures.
+
+ARP Spoofing Attacks
+____________________________
+
+ARP is short for Address Resolution Protocol, a protocol that is used to resolve IP addresses to MAC (Media Access Control) addresses for transmitting data. In an ARP spoofing attack, a malicious party sends spoofed ARP messages across a local area network in order to link the attacker’s MAC address with the IP address of a legitimate member of the network. This type of spoofing attack results in data that is intended for the host’s IP address getting sent to the attacker instead. Malicious parties commonly use ARP spoofing to steal information, modify data-in-transit or stop traffic on a LAN. ARP spoofing attacks can also be used to facilitate other types of attacks, including denial-of-service, session hijacking and man-in-the-middle attacks. ARP spoofing only works on local area networks that use the Address Resolution Protocol.
+
+DNS Server Spoofing Attacks
+_______________________________
+
+The Domain Name System (DNS) is a system that associates domain names with IP addresses. Devices that connect to the internet or other private networks rely on the DNS for resolving URLs, email addresses and other human-readable domain names into their corresponding IP addresses. In a DNS server spoofing attack, a malicious party modifies the DNS server in order to reroute a specific domain name to a different IP address. In many cases, the new IP address will be for a server that is actually controlled by the attacker and contains files infected with malware. DNS server spoofing attacks are often used to spread computer worms and viruses.
+
+Spoofing Attack Prevention and Mitigation
+_____________________________________________
+
+There are many tools and practices that organizations can employ to reduce the threat of spoofing attacks. Common measures that organizations can take for spoofing attack prevention include:
+
+Packet filtering: Packet filters inspect packets as they are transmitted across a network. Packet filters are useful in IP address spoofing attack prevention because they are capable of filtering out and blocking packets with conflicting source address information (packets from outside the network that show source addresses from inside the network and vice-versa).
+Avoid trust relationships: Organizations should develop protocols that rely on trust relationships as little as possible. It is significantly easier for attackers to run spoofing attacks when trust relationships are in place because trust relationships only use IP addresses for authentication.
+Use spoofing detection software: There are many programs available that help organizations detect spoofing attacks, particularly ARP Spoofing. These programs work by inspecting and certifying data before it is transmitted and blocking data that appears to be spoofed.
+Use cryptographic network protocols: Transport Layer Security (TLS), Secure Shell (SSH), HTTP Secure (HTTPS) and other secure communications protocols bolster spoofing attack prevention efforts by encrypting data before it is sent and authenticating data as it is received.
+
+
+
+
+_____________________
+SPYWARE
+What Is Spyware?
+______________________
+
+ 
+Although it sounds like something James Bond would employ, spyware is all too real. Spyware is any software that installs itself on your computer and starts covertly monitoring your online behavior without your knowledge or permission. Spyware is a kind of malware that secretly gathers information about a person or organization and relays this data to other parties. In some cases, these may be advertisers or marketing data firms, which is why spyware is sometimes referred to as “adware.” It is installed without user consent by methods such as a drive-by download, a trojan included with a legitimate program or a deceptive pop-up window.
+
+Spyware uses your internet connection to relay personal information such as your name, address, browsing habits, preferences, interests or downloads. Other forms of spyware hijack your browser to point it to another website, cause your device to place calls or send texts automatically, or serve annoying ads even when you are offline. Spyware that steals your username, password or other credentials is referred to as a “keylogger” – an insidious prerequisite for cyber crime.
+
+Signs of a spyware infection can include unwanted behaviors and degradation of system performance. It can eat up CPU capacity, disk usage and network traffic. Stability issues such as applications freezing, failure to boot, difficulty connecting to the internet and system crashes are also common.
+
+
+
+Spyware and User Privacy
+__________________________
+
+Not all data collection programs are spyware, as long as the user fully understands what data is being collected and with whom it is being shared. Tracking and reporting user information can help legitimate software vendors to improve their products or better support customers. For this reason, marketing firms often object to having their services called "spyware." The line between illegal spyware and legitimate data collection is often drawn at cookies, a well-known method of storing information about internet behavior on individuals' devices. Some users allow cookies; others abhor them.
+
+ways-of-tracking.jpg
+ways of tracking
+ways of tracking
+Divergent attitudes about the definitions of spyware make it an integral concern of privacy experts, who question and debate its merit. Spyware is virtually unregulated. These programs seldom if ever include a mechanism for the user to oversee and approve what information is being gathered and how it is shared, even if the usage is lawful. Add to this the fact that spyware devours computing resources like bandwidth, processing power and memory without any control. It’s easy to see why security experts seek to prevent and defend against spyware.
+
+Tips to Prevent Spyware
+___________________________
+
+Use an anti-spyware scanner. There are many anti-spyware programs available that will scan your computer to detect malicious tracking software. Removing spyware from a computer or device can be tricky, but it can always be quarantined to no longer function. Most packages provide ongoing anti-spyware protection against the real-time installation of new spyware by scanning incoming traffic and blocking any potential threats. Like any anti-virus program, anti-spyware tools must be updated regularly to remain fully effective.
+
+Adjust browser security settings. Most browsers allow you to adjust their security levels along a scale from “high” to “low.” Get to know these options, as some browsers can function like a firewall against unwanted operations, even cookie installation if so desired.
+
+Be very wary of pop-ups. Ads and offers displayed in pop-up windows, especially those that appear unexpectedly, often mask deceptive purposes. Some pretend a virus infection has been discovered on your computer or offer a plug-in that purports to improve your browsing experience. Never click "agree" or "OK" to close a window; instead click the red "x" in the corner of the window to close. Practice skeptical computing – assume that any new program is potentially harmful until proven safe. Answering “yes” to a prompt that you don't understand can allow spyware to be loaded.
+
+Understand that “free" is never “free.” In most cases with free apps, you implicitly agree to trade tracking for services. You “pay” for the app by agreeing to receive targeted ads. You can decide that this is a fair trade off, but most companies need to track your online activities to determine which ads to show you.
+
+Always read terms & conditions. Legitimate software vendors will disclose information about how they collect and employ user information in their terms and conditions. Most users don’t even bother to read them. If you are particularly adamant about protecting your online privacy, it’s best to know exactly what you are signing up for. If privacy policies are abused or changed without user knowledge, a software vendor can seriously violate user trust no matter its original intent.
+
+
+
+
+_________________________
+ARP SPOOFING
+What Is ARP Spoofing?
+__________________________
+
+ARP spoofing is a type of attack in which a malicious actor sends falsified ARP (Address Resolution Protocol) messages over a local area network. This results in the linking of an attacker’s MAC address with the IP address of a legitimate computer or server on the network. Once the attacker’s MAC address is connected to an authentic IP address, the attacker will begin receiving any data that is intended for that IP address. ARP spoofing can enable malicious parties to intercept, modify or even stop data in-transit. ARP spoofing attacks can only occur on local area networks that utilize the Address Resolution Protocol.
+
+ARP Spoofing Attacks
+_______________________
+
+The effects of ARP spoofing attacks can have serious implications for enterprises. In their most basic application, ARP spoofing attacks are used to steal sensitive information. Beyond this, ARP spoofing attacks are often used to facilitate other attacks such as:
+
+Denial-of-service attacks: DoS attacks often leverage ARP spoofing to link multiple IP addresses with a single target’s MAC address. As a result, traffic that is intended for many different IP addresses will be redirected to the target’s MAC address, overloading the target with traffic.
+Session hijacking: Session hijacking attacks can use ARP spoofing to steal session IDs, granting attackers access to private systems and data.
+Man-in-the-middle attacks: MITM attacks can rely on ARP spoofing to intercept and modify traffic between victims.
+ARP Spoofing Tutorial
+
+ARP spoofing attacks typically follow a similar progression. The steps to an ARP spoofing attack usually include:
+
+The attacker opens an ARP spoofing tool and sets the tool’s IP address to match the IP subnet of a target. Examples of popular ARP spoofing software include Arpspoof, Cain & Abel, Arpoison and Ettercap.
+The attacker uses the ARP spoofing tool to scan for the IP and MAC addresses of hosts in the target’s subnet.
+The attacker chooses its target and begins sending ARP packets across the LAN that contain the attacker’s MAC address and the target’s IP address.
+As other hosts on the LAN cache the spoofed ARP packets, data that those hosts send to the victim will go to the attacker instead. From here, the attacker can steal data or launch a more sophisticated follow-up attack.
+
+
+ARP Spoofing Detection, Prevention and Protection
+___________________________________________________
+
+The following methods are recommended measures for detecting, preventing and protecting against ARP spoofing attacks:
+
+Packet filtering: Packet filters inspect packets as they are transmitted across a network. Packet filters are useful in ARP spoofing prevention because they are capable of filtering out and blocking packets with conflicting source address information (packets from outside the network that show source addresses from inside the network and vice-versa).
+Avoid trust relationships: Organizations should develop protocols that rely on trust relationships as little as possible. Trust relationships rely only on IP addresses for authentication, making it significantly easier for attackers to run ARP spoofing attacks when they are in place.
+Use ARP spoofing detection software: There are many programs available that help organizations detect ARP spoofing attacks. These programs work by inspecting and certifying data before it is transmitted and blocking data that appears to be spoofed.
+Use cryptographic network protocols: Transport Layer Security (TLS), Secure Shell (SSH), HTTP Secure (HTTPS) and other secure communications protocols bolster ARP spoofing attack prevention by encrypting data prior to transmission and authenticating data when it is received.
+
+
+
+
+
+
+How does Netcut work??
+_______________________
+Netcut uses attacking technique called ARP Spoofing.
+ARP (Address Resolution Protocol) is a link layer procotol, it is used for resolving network layer address (IP) into link layer address (MAC).
+When we want to send IP packet to another host (a computer in the same LAN, or the Gateway), we must know the destination IP address. In order for the packet to reach the destination, the destination IP address must be converted to the corresponding MAC address, so the transmission can be processed in the data link layer. To setup this mapping IP-MAC in the ARP table, we must first send ARP request as broadcast one to the LAN. In the happy case, the one with the IP in the ARP request will reply us with his MAC address.
+Unfortunately, ARP is a stateless protocol. This means we continue to accept ARP replies and overwrite the old ones, even they have not expired yet. Worse, ARP does not define any authentication method to check whether the replies come from the trusted one (the one we want to receive the replies). These offer chances for the attacker to perform ARP Spoofing.
+The theory behind ARP Spoofing
+From the machine in the LAN, the attacker associate his MAC address and IP address of the target host (usually the Gateway), so that any traffic sent to that target host will come to the attacker. Here the attacker can decide whether to modify the packet, send or not.
+There are 3 types of ARP Spoofing
+Spoof the host computer
+Spoof the Gateway
+Spoof both the host computer and the Gateway
+To see the ARP table
+Open Command line (Windows) or Terminal (Mac OSX), and type
+[code language=”css”]
+arp -a
+[/code]
+This will list the MAC address associated with a specific IP. Note that some mappings maybe wrong due to ARP Spoofing
+How to prevent against this ?
+To prevent spoofing our computer, we can use softwares (search for Anti Netcut, Anti ARP spoofing, …) or set the static ARP ourselves. In fact, those softwares are based on setting static ARP. This way we set the static mapping IP-MAC for a specific host (computer or Gateway), and the OS definitely ignores all ARP replies for that IP.
+Example of static ARP mapping associated with the Gateway, performed on the computer host
+[code language=”css”]
+192.168.1.1 B4-B3-62-7C-CE-55
+[/code]
+Here 192.168.1.1 and B4-B3-62-7C-CE-55 are the Gateway’s IP and MAC address
+To prevent spoofing the Gateway, we must set static ARP on that Gateway. Go to the Gateway/Router interface, in its ARP setting, fill in the mapping IP-MAC for a specific host
+Look for that Gateway manual or the related guide on how to perform this. This is devices dependent-method, but the theory remains the same.
+Example of static ARP mapping associated with the computer host, performed on the Gateway
+[code language=”css”]
+192.168.1.2 64-70-02-B2-9B-E1
+[/code]
+Here 192.168.1.2 and 64-70-02-B2-9B-E1 are the machine host ‘s IP and MAC address. The machine host can be any computer in the LAN
+How to set static ARP
+Proposed that
+192.168.1.1 The destination host ‘s IP
+B4-B3-62-7C-CE-55 The destination host ‘s MAC
+Local Area Connection Our network interface name
+Open Command Line (Windows) or Terminal (Mac OSX) and type
+Windows XP
+To delete specific mapping
+[code language=”css”]
+arp -d 192.168.1.1
+[/code]
+To set specific mapping
+[code language=”css”]
+arp -s 192.168.1.1 B4-B3-62-7C-CE-55
+[/code]
+Windows 7 64bit
+Maybe you need to open Command Line as Administration role
+To delete specific mapping
+[code language=”css”]
+netsh interface ipv4 delete neighbors 192.168.1.1
+[/code]
+To set specific mapping
+[code language=”css”]
+netsh interface ipv4 add neighbors “Local Area Connection” 192.168.1.1 B4-B3-62-7C-CE-55
+[/code]
+Mac OSX
+To delete specific mapping
+[code language=”css”]
+sudo arp -d 192.168.1.1
+[/code]
+To set specific mapping
+[code language=”css”]
+sudo arp -s 192.168.1.1 B4-B3-62-7C-CE-55
+[/code]
